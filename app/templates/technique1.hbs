@@ -1,0 +1,9 @@
+<p>Using a component</p>
+
+{{#each this.items key='@index' as |item|}}
+  <Auto @item={{item}} />
+{{/each}}
+
+<br /><br />
+
+<button type='button' {{on 'click' this.changeItems}}>Change items</button>

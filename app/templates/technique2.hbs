@@ -1,0 +1,11 @@
+<p>Using component helper</p>
+
+{{#each this.items key='@index' as |item|}}
+  {{#let (component item) as |Component|}}
+    <Component @item={{item}} />
+  {{/let}}
+{{/each}}
+
+<br /><br />
+
+<button type='button' {{on 'click' this.changeItems}}>Change items</button>
